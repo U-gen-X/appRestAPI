@@ -1,6 +1,5 @@
 const bodyParser = require("body-parser");
 const express = require("express");
-const { listen } = require("express/lib/application");
 const app = express();
 
 // parse aplikasi/json
