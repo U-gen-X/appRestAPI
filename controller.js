@@ -72,3 +72,20 @@ exports.editdata = function (req, res) {
         }
     );
 };
+
+// mendelete data mahasiswa
+exports.hapusdata = function (req, res) {
+    let id = req.body.id_mhs;
+
+    connection.query(
+        "DELETE FROM mahasiswa WHERE id_mhs=?",
+        [id],
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Data berhasil di hapus", res);
+            }
+        }
+    );
+};
